@@ -1,0 +1,9 @@
+@import "tailwindcss";
+body {
+  font-family: 'Roboto', sans-serif !important;
+ letter-spacing: 0.06rem;
+}
+
+code, pre {
+  font-family:'Intel One Mono', monospace !important;
+}
