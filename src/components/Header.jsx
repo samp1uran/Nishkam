@@ -2,21 +2,6 @@ import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const navItems = [
-  {
-    label: "Courses",
-    links: ["Design", "Development", "SEO"],
-  },
-  {
-    label: "Resources",
-    links: ["Website", "Mobile App", "SaaS"],
-  },
-  {
-    label: "Beyond Academics",
-    links: ["Team", "Mission", "Careers"],
-  },
-];
-
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const handleClick = () => {
@@ -108,9 +93,12 @@ export default function Navbar() {
 
         {/* Right: Login */}
         <div className="hidden md:block">
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+          <Link
+            to="/login"
+            className="bg-yellow-500 text-white px-4 py-2 rounded-md hover:bg-yellow-600 shadow-xl transition-all"
+          >
             Login
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -196,9 +184,13 @@ export default function Navbar() {
               </ul>
             </details>
           </div>
-          <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-md w-full">
+          <Link
+            onClick={handleClick}
+            to="/login"
+            className="text-center bg-yellow-500 text-white px-4 py-2 rounded-md hover:bg-yellow-600 shadow-xl transition-all"
+          >
             Login
-          </button>
+          </Link>
         </div>
       </div>
     </nav>
