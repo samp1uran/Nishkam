@@ -3,7 +3,6 @@ import React from "react";
 function Login() {
   return (
     <>
-        {/* <div className="flex flex-col items-center justify-center mx-auto md:h-screen lg:py-0"> */}
             
           <div className="w-full mx-auto bg-white rounded-lg shadow dark:border md: mt-16 mb-16 sm:max-w-md xl:p-0 ">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -88,7 +87,7 @@ function Login() {
               </form>
             </div>
           </div>
-        {/* </div> */}
+      
     </>
   );
 }
