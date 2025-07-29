@@ -11,7 +11,7 @@ function Login() {
           <form className="space-y-4 md:space-y-6" action="#">
             <div>
               <label
-                for="email"
+                htmlFor="email"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
               >
                 Your email
@@ -27,7 +27,7 @@ function Login() {
             </div>
             <div>
               <label
-                for="password"
+                htmlFor="password"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
               >
                 Password
@@ -53,7 +53,7 @@ function Login() {
                   />
                 </div>
                 <div className="ml-3 text-sm">
-                  <label for="remember" className="text-gray-900">
+                  <label htmlFor="remember" className="text-gray-900">
                     Remember me
                   </label>
                 </div>

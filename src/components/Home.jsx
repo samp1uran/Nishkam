@@ -8,7 +8,7 @@ function Home() {
     <>
         <Hero/>
         <Suspense fallback={Loading}>
-            <Loading></Loading>
+            <Courses/>
         </Suspense>
     </>
   )
