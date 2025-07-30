@@ -1,13 +1,11 @@
-import React from "react";
 import { Link } from "react-router-dom";
-
-function Login() {
+function Signup() {
   return (
     <>
       <div className="w-full mx-auto bg-white rounded-lg shadow dark:border md: mt-16 mb-16 sm:max-w-md xl:p-0 ">
         <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
           <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-black">
-            Sign in to your account
+            Create your account
           </h1>
           <form className="space-y-4 md:space-y-6" action="#">
             <div>
@@ -59,12 +57,12 @@ function Login() {
                   </label>
                 </div>
               </div>
-              <a
+              {/* <a
                 href="#"
                 className="text-sm font-medium text-gray-900 hover:underline"
               >
                 Forgot password?
-              </a>
+              </a> */}
             </div>
             <button
               type="submit"
@@ -73,9 +71,9 @@ function Login() {
               Sign in
             </button>
             <p className="text-sm font-light text-gray-900">
-              Don’t have an account yet?{" "}
-              <Link to='/signup' className="font-medium text-blue-500 hover:underline">
-                Sign up
+              Already have an account ?{" "}
+              <Link to='/login' className="font-medium text-blue-500 hover:underline">
+                Login
               </Link>
             </p>
           </form>
@@ -85,4 +83,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Signup;
