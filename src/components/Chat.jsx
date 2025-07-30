@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const phoneNumber=import.meta.env.VITE_number
+const phoneNumber = import.meta.env.VITE_number;
 function Chat() {
   const [hidden, setHidden] = useState("hidden");
   const [text, setText] = useState("");
