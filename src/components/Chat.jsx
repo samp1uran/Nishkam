@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import chat_bot_icon from "../assets/chat-bot-icon.jpg"
 const phoneNumber = import.meta.env.VITE_number;
 function Chat() {
   const [hidden, setHidden] = useState("hidden");
@@ -56,7 +57,7 @@ function Chat() {
       </div>
       <img
         onClick={() => setHidden(hidden == "hidden" ? "visible" : "hidden")}
-        src="./public/chat-bot-icon.jpg"
+        src={chat_bot_icon}
         className="h-22 w-22 animate-bounce right-5 bottom-7 fixed md:bottom-10 md:right-8 cursor-pointer text-indigo-800 "
         alt="chat"
         placeholder="chat"
