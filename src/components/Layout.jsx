@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import Chat from "./Chat";
-
+import { ToastContainer } from 'react-toastify'
 export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -12,6 +12,15 @@ export default function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          toastClassName="toast-class"
+          closeOnClick
+          pauseOnHover
+          draggable
+        />
     </div>
   );
 }

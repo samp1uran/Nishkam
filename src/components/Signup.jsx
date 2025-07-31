@@ -1,5 +1,28 @@
-import { Link } from "react-router-dom";
+import React, { useRef } from "react";
+import emailjs from "emailjs-com";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+const serviceId = import.meta.env.VITE_serviceId;
+const templateId = import.meta.env.VITE_templateId;
+const publicId = import.meta.env.VITE_publicId;
+
 function Signup() {
+  const form = useRef();
+  const navigate=useNavigate()
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(serviceId, templateId, form.current, publicId).then(
+      (result) => {
+        toast.success("User login & Email sent successfully");
+        form.current.reset();
+        navigate('/')
+      },
+      (error) => {
+        toast.error("Failed to send email");
+      }
+    );
+  };
   return (
     <>
       <div className="w-full mx-auto bg-white rounded-lg shadow dark:border md: mt-16 mb-16 sm:max-w-md xl:p-0 ">
@@ -7,7 +30,27 @@ function Signup() {
           <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-black">
             Create your account
           </h1>
-          <form className="space-y-4 md:space-y-6" action="#">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="space-y-4 md:space-y-6"
+          >
+            <div>
+              <label
+                htmlFor="name"
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+              >
+                Your Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                className=" border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Your name."
+                required
+              />
+            </div>
             <div>
               <label
                 htmlFor="email"
@@ -57,22 +100,19 @@ function Signup() {
                   </label>
                 </div>
               </div>
-              {/* <a
-                href="#"
-                className="text-sm font-medium text-gray-900 hover:underline"
-              >
-                Forgot password?
-              </a> */}
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white border-2 bg-primary-600 hover:bg-blue-600 shadow-2xl focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
+              className="cursor-pointer w-full bg-blue-500 text-white border-2 bg-primary-600 hover:bg-blue-600 shadow-2xl focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
             >
               Sign in
             </button>
             <p className="text-sm font-light text-gray-900">
               Already have an account ?{" "}
-              <Link to='/login' className="font-medium text-blue-500 hover:underline">
+              <Link
+                to="/login"
+                className="font-medium text-blue-500 hover:underline"
+              >
                 Login
               </Link>
             </p>
