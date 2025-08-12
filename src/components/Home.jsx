@@ -6,7 +6,7 @@ import { FaRegClipboard, FaUsers } from "react-icons/fa";
 function Home() {
   return (
     <>
-      {/* <Hero /> */}
+      <Hero />
       {/* <Suspense fallback={Loading}>
             <Courses/>
         </Suspense> */}
