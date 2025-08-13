@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
+import { useActive } from "../Context/ActiveContext";
 const services = [
   "AUDITING & ASSURANCE SERVICE",
   "BUSINESS & FINANCE PLANNING",
@@ -13,7 +14,8 @@ const services = [
 ];
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [active, setActive] = useState("HOME");
+  // const [active, setActive] = useState("HOME");
+  const {active,setActive}=useActive()
   const [servicesOpen, setServicesOpen] = useState(false);
   const navigate = useNavigate();
   const menuItems = [

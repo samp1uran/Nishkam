@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Briefcase,
   PiggyBank,
@@ -9,6 +9,7 @@ import {
   Globe,
   Search,
 } from "lucide-react";
+import { useActive } from "../../Context/ActiveContext";
 
 const services = [
   {
@@ -54,7 +55,10 @@ const services = [
       "Helping businesses and individuals identify and document financial frauds, accounting irregularities, and other legal disputes.",
   },
 ];
+
 function Services() {
+  const {setActive}=useActive();
+  const navigate=useNavigate()
   return (
     <div className="w-full">
       {/* hero */}
@@ -70,19 +74,21 @@ function Services() {
           OUR SERVICES
         </h1>
         <div className="absolute bottom-18 text-white text-sm z-10">
-          <Link
-            to="/"
-            className="hover:text-green-500 transition-normal duration-200"
+          <span
+            onClick={()=>{
+              setActive("HOME")
+              navigate('/')
+            }}
+            className="hover:text-green-500 cursor-pointer transition-normal duration-200"
           >
             Home
-          </Link>{" "}
+          </span>{" "}
           &gt;{" "}
-          <Link
-            to="/ourServices"
-            className="hover:text-green-500 transition-normal duration-200"
+          <span
+            className="hover:text-green-500 cursor-pointer transition-normal duration-200"
           >
             Our Services
-          </Link>
+          </span>
         </div>
       </div>
 
