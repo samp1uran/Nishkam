@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <>
       <section
-        className="h-screen mx-2 mb-4 bg-fixed bg-center flex items-center justify-center"
+        className="h-screen mx-2 mb-4 bg-center md:bg-fixed bg-cover bg-no-repeat flex items-center justify-center"
         style={{
           backgroundImage:
             "url('https://cdn.prod.website-files.com/63b042656c21e611f6f8be44/67f7ed324ebc2fa1540e4b2e_640b569fc38939793fde0420_32f473e5-be47-4da8-b11e-45431216a73a.webp')",
