@@ -58,7 +58,7 @@ function Chat() {
       <img
         onClick={() => setHidden(hidden == "hidden" ? "visible" : "hidden")}
         src={chat_bot_icon}
-        className="h-22 w-22 animate-bounce right-5 bottom-7 fixed md:bottom-10 md:right-8 cursor-pointer text-indigo-800 "
+        className="z-50 h-22 w-22 animate-bounce right-5 bottom-7 fixed md:bottom-10 md:right-8 cursor-pointer text-indigo-800 "
         alt="chat"
         placeholder="chat"
       />
