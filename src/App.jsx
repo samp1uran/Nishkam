@@ -5,6 +5,8 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import About from "./components/About";
 import Services from "./components/Services/Services";
+import OurClientele from "./components/OurClientele";
+import WorkWithUs from "./components/WorkWithUs";
 
 export default function App() {
   return (
@@ -14,6 +16,8 @@ export default function App() {
         <Route path="about" element={<About/>} />
         <Route path="ourServices" element={<Services/>} />
         <Route path="login" element={<Login/>} />
+        <Route path="ourClientele" element={<OurClientele/>} />
+        <Route path="workWithUs" element={<WorkWithUs/>} />
         <Route path="signup" element={<Signup/>}/>
       </Route>
     </Routes>

@@ -22,7 +22,7 @@ const Navbar = () => {
     ["HOME", "/"],
     ["ABOUT US", "about"],
     ["OUR SERVICES", "ourServices"],
-    ["OUR CLIENTELE", "clientele"],
+    ["OUR CLIENTELE", "ourClientele"],
     ["WORK WITH US", "workWithUs"],
     ["TEAM", "team"],
     // ["ALUMNI",
