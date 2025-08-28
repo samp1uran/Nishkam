@@ -7,6 +7,8 @@ import About from "./components/About";
 import Services from "./components/Services/Services";
 import OurClientele from "./components/OurClientele";
 import WorkWithUs from "./components/WorkWithUs";
+import Team from "./components/Team";
+import Resources from "./components/Resources";
 
 export default function App() {
   return (
@@ -18,6 +20,8 @@ export default function App() {
         <Route path="login" element={<Login/>} />
         <Route path="ourClientele" element={<OurClientele/>} />
         <Route path="workWithUs" element={<WorkWithUs/>} />
+        <Route path="team" element={<Team/>} />
+        <Route path="resources" element={<Resources/>} />
         <Route path="signup" element={<Signup/>}/>
       </Route>
     </Routes>
