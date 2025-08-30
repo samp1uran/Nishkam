@@ -29,7 +29,7 @@ const Navbar = () => {
     ["RESOURCES", "resources"],
     ["BLOG", "blog"],
     // ["GALLERY",
-    ["CONTACT US", "contactUs"],
+    ["CONTACT US", "contact"],
   ];
 
   return (
