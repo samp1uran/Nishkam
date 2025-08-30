@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import Courses from "./Courses";
 import Loading from "./Loading";
 import { FaRegClipboard, FaUsers } from "react-icons/fa";
+import Services from "./Services/Services";
 function Home() {
   return (
     <>
@@ -101,6 +102,10 @@ function Home() {
           </div>
         </div>
       </section>
+
+        {/* 3rd section */}
+        <Services isHidden="hidden"/>
+
     </>
   );
 }
