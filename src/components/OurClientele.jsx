@@ -30,7 +30,7 @@ const OurClientele = () => {
     <div className="w-full">
       {/* Hero Section */}
       <div
-        className="relative h-64 md:bg-fixed bg-cover bg-center flex items-center justify-center"
+        className="relative h-64 bg-no-repeat md:bg-fixed bg-cover bg-center flex items-center justify-center"
         style={{
           backgroundImage:
             "url('https://t3.ftcdn.net/jpg/04/69/65/74/360_F_469657442_Mw9u0448ruHskkyrAPgkbVVy1i8mQITt.jpg')", // Replace with actual image URL

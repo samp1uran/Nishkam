@@ -1,5 +1,4 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   Briefcase,
   PiggyBank,
@@ -63,7 +62,7 @@ function Services({isHidden=""}) {
     <div className="w-full">
       {/* hero */}
       <div
-        className={`${isHidden} relative h-64 md:bg-fixed bg-cover bg-center flex items-center justify-center`}
+        className={`${isHidden} relative h-64 bg-no-repeat md:bg-fixed bg-cover bg-center flex items-center justify-center`}
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHNlcnZpY2V8ZW58MHx8MHx8fDA%3D')", // Replace with actual image URL

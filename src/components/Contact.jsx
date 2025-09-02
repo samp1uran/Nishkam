@@ -9,7 +9,7 @@ const Contact = () => {
     <div className="w-full">
       {/* Hero Section */}
       <div
-        className="relative h-64 md:bg-fixed bg-cover bg-center flex items-center justify-center"
+        className="relative h-64 bg-no-repeat md:bg-fixed bg-cover bg-center flex items-center justify-center"
         style={{
           backgroundImage:
             "url('https://t4.ftcdn.net/jpg/04/81/72/77/360_F_481727770_1u2ylNpie8WRosMVbv1COXDnnEK6ofwh.jpg')", // Replace with actual image URL

@@ -9,7 +9,7 @@ const About = () => {
     <div className="w-full">
       {/* Hero Section */}
       <div
-        className="relative h-64 md:bg-fixed bg-cover bg-center flex items-center justify-center"
+        className="relative h-64 bg-no-repeat md:bg-fixed bg-cover bg-center flex items-center justify-center"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1455849318743-b2233052fcff?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YWJvdXQlMjB1c3xlbnwwfHwwfHx8MA%3D%3D')", // Replace with actual image URL

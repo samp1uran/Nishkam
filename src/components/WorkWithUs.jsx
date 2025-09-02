@@ -32,7 +32,7 @@ const WorkWithUs = () => {
     <div className="w-full">
       {/* Hero Section */}
       <div
-        className="relative h-64 md:bg-fixed bg-cover bg-center flex items-center justify-center"
+        className="relative h-64 bg-no-repeat md:bg-fixed bg-cover bg-center flex items-center justify-center"
         style={{
           backgroundImage:
             "url('https://i.shgcdn.com/6ed97794-6d1a-43a7-b2a0-ff32a0e05e1b/-/format/auto/-/preview/3000x3000/-/quality/lighter/')", // Replace with actual image URL

@@ -8,7 +8,7 @@ const Team = () => {
     <div className="w-full">
       {/* Hero Section */}
       <div
-        className="relative h-64 md:bg-fixed bg-cover bg-center flex items-center justify-center"
+        className="relative h-64 bg-no-repeat md:bg-fixed bg-cover bg-center flex items-center justify-center"
         style={{
           backgroundImage:
             "url('https://www.shutterstock.com/image-vector/diverse-group-people-participate-teambuilding-600nw-2490105935.jpg')", // Replace with actual image URL

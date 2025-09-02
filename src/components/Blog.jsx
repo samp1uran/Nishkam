@@ -9,7 +9,7 @@ export default function Blog() {
     <div className="w-full">
       {/* Hero Section */}
       <div
-        className="relative h-64 bg-cover bg-center flex flex-col items-center justify-center"
+        className="relative h-64 bg-no-repeat bg-cover bg-center flex flex-col items-center justify-center"
         style={{
           backgroundImage:
             "url('https://www.forbes.com/advisor/wp-content/uploads/2022/06/How_To_Start_A_Blog_-_article_image.jpg')",
