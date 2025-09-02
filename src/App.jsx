@@ -11,6 +11,12 @@ import Team from "./components/Team";
 import Resources from "./components/Resources";
 import Blog from "./components/Blog";
 import Contact from "./components/Contact";
+import Business from "./components/Services/Business";
+import Accounting from "./components/Services/Accounting";
+import Taxation from "./components/Services/Taxation";
+import LawConsultant from "./components/Services/LawConsultant";
+import ForeignTrade from "./components/Services/ForeignTrade";
+import FraudAccounting from "./components/Services/Fraud";
 
 export default function App() {
   return (
@@ -26,6 +32,13 @@ export default function App() {
         <Route path="resources" element={<Resources/>} />
         <Route path="blog" element={<Blog/>} />
         <Route path="contact" element={<Contact/>} />
+        <Route path="services/business" element={<Business/>} />
+        <Route path="services/outsourcing" element={<Business/>} />
+        <Route path="services/taxation" element={<Taxation/>} />
+        <Route path="services/lawConsultant" element={<LawConsultant/>} />
+        <Route path="services/auditing" element={<FraudAccounting/>} />
+        <Route path="services/foreignTrade" element={<ForeignTrade/>} />
+        <Route path="services/accounting" element={<Accounting/>} />
         <Route path="signup" element={<Signup/>}/>
       </Route>
     </Routes>

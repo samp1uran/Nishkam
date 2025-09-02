@@ -4,18 +4,21 @@ import { Link, useNavigate } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 import { useActive } from "../Context/ActiveContext";
 const services = [
-  "AUDITING & ASSURANCE SERVICE",
-  "BUSINESS & FINANCE PLANNING",
-  "ACCOUNTING CONSULTANCY",
-  "BUSINESS PROCESS OUTSOURCING",
-  "DIRECT / INDIRECT TAXATION",
-  "FOREIGN TRADE POLICIES",
-  "COMPANY SECRETARIAL AND CORPORATE LAWS CONSULTANT",
+  ["AUDITING & ASSURANCE SERVICE", "services/auditing"],
+  ["BUSINESS & FINANCE PLANNING", "services/business"],
+  ["ACCOUNTING CONSULTANCY", "services/accounting"],
+  ["BUSINESS PROCESS OUTSOURCING", "services/outsourcing"],
+  ["DIRECT / INDIRECT TAXATION", "services/taxation"],
+  ["FOREIGN TRADE POLICIES", "services/foreignTrade"],
+  [
+    "COMPANY SECRETARIAL AND CORPORATE LAWS CONSULTANT",
+    "services/lawConsultant",
+  ],
 ];
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   // const [active, setActive] = useState("HOME");
-  const {active,setActive}=useActive()
+  const { active, setActive } = useActive();
   const [servicesOpen, setServicesOpen] = useState(false);
   const navigate = useNavigate();
   const menuItems = [
@@ -85,12 +88,20 @@ const Navbar = () => {
                  transition-all duration-300"
                   >
                     {services.map((item, i) => (
-                      <li
-                        key={i}
-                        className="pl-4 pr-2 py-2 hover:bg-gray-100 cursor-pointer text-xs"
+                      // <li
+                      //   key={i}
+                      //   to={item[1]}
+                      //   className="pl-4 pr-2 py-2 hover:bg-gray-100 cursor-pointer text-xs"
+                      // >
+                      //   <Link className="w-full h-full" to={item[1]}>{item[0]}</Link>
+                      // </li>
+                      <Link
+                        key={item[0]}
+                        to={item[1]}
+                        className={`flex items-center gap-1 px-3 py-3 font-light text-xs transition-all cursor-pointer text-black hover:text-teal-500`}
                       >
-                        {item}
-                      </li>
+                        {item[0]}
+                      </Link>
                     ))}
                   </ul>
                 </div>
@@ -168,16 +179,17 @@ const Navbar = () => {
                   {servicesOpen && (
                     <ul className="border-t">
                       {services.map((service, i) => (
-                        <li
+                        <Link
                           key={i}
+                          to={service[1]}
                           onClick={() => {
                             setActive(item[0]);
                             setMenuOpen(false);
                           }}
-                          className="pl-2 py-1 hover:bg-gray-100 cursor-pointer text-xs"
+                          className="pl-2 py-1 hover:bg-gray-100 flex items-center gap-1 font-light text-xs transition-all cursor-pointer text-black hover:text-teal-500"
                         >
-                          {service}
-                        </li>
+                          {service[0]}
+                        </Link>
                       ))}
                     </ul>
                   )}
@@ -200,7 +212,6 @@ const Navbar = () => {
               )}
             </div>
           ))}
-
         </div>
       </div>
     </nav>
