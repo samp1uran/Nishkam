@@ -21,7 +21,7 @@ const services = [
     description:
       "Comprehensive support for company formation, compliance, and business structuring.",
     icon: <Building2 className="w-8 h-8 text-primary" />,
-    link: "/services/corporate-services",
+    link: "/services/corporate-service",
   },
   {
     title: "Audit",
@@ -42,7 +42,7 @@ const services = [
     description:
       "Specialized tax, compliance, and investment solutions for NRIs and foreign entities.",
     icon: <Globe2 className="w-8 h-8 text-primary" />,
-    link: "/services/non-residents",
+    link: "/services/services-for-non-residents",
   },
   {
     title: "Accounting Services",
@@ -139,6 +139,7 @@ function Services({ isHidden = "" }) {
           {services.map((service, index) => (
             <Link
               key={index}
+              onClick={() => setActive("OUR SERVICES")}
               to={service.link}
               className="group flex flex-col items-center text-center p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-gray-200"
             >

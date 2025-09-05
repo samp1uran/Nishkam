@@ -83,8 +83,8 @@
 
 //                   {/* Dropdown */}
 //                   <ul
-//                     className="absolute left-0 mt-2 bg-white shadow-lg rounded-md w-64 
-//                  opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+//                     className="absolute left-0 mt-2 bg-white shadow-lg rounded-md w-64
+//                  opacity-0 invisible group-hover:opacity-100 group-hover:visible
 //                  transition-all duration-300"
 //                   >
 //                     {services.map((item, i) => (
@@ -240,8 +240,6 @@ const services = [
   ["Corporate Governance", "services/corporate-governance"],
   ["TDS", "services/tds"],
 ];
-;
-
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { active, setActive } = useActive();
@@ -279,16 +277,46 @@ const Navbar = () => {
     <nav className="shadow-md bg-white w-full flex justify-center items-center z-50 relative">
       <div className="flex flex-col w-full lg:w-fit lg:justify-between gap-8">
         {/* Top Section */}
-        <div className="flex justify-start lg:justify-between items-center py-3 lg:py-4">
+        <div className="flex justify-start lg:justify-center items-center py-3 lg:py-4">
           {/* Mobile Menu Icon */}
           <div className="flex items-center ml-3 gap-4 lg:hidden">
-            <FiMenu className="text-2xl cursor-pointer" onClick={() => setMenuOpen(true)} />
+            <FiMenu
+              className="text-2xl cursor-pointer"
+              onClick={() => setMenuOpen(true)}
+            />
           </div>
 
           {/* Logo */}
-          <div className="text-center flex-1">
-            <h1 className="text-2xl md:text-3xl font-bold text-teal-500">Nishkam Bansal</h1>
-            <p className="text-[10px] md:text-xs text-gray-700 tracking-wide">CHARTERED ACCOUNTANTS</p>
+          {/* <div className="text-center flex-1">
+            <img
+              src="/logo2.png" // <-- replace with your logo path
+              alt="Logo"
+              className="w-10 h-10 md:w-14 md:h-14 object-contain"
+            />
+            <h1 className="text-2xl md:text-3xl font-bold text-teal-500">
+              Nishkam Bansal
+            </h1>
+            <p className="text-[10px] md:text-xs text-gray-700 tracking-wide">
+              CHARTERED ACCOUNTANTS
+            </p>
+          </div> */}
+          <div className="ml-2 lg:ml-0 flex justify-center items-center gap-2">
+            {/* Logo */}
+            <img
+              src="/logo2.png" // <-- replace with your logo path
+              alt="Logo"
+              className="w-10 h-10 md:w-14 md:h-14 object-contain"
+            />
+
+            {/* Text */}
+            <div className="text-center flex-1">
+              <h1 className="text-2xl md:text-3xl font-bold text-teal-500">
+                Nishkam Bansal
+              </h1>
+              <p className="text-[10px] md:text-xs text-gray-700 tracking-wide">
+                CHARTERED ACCOUNTANTS
+              </p>
+            </div>
           </div>
         </div>
 
@@ -312,7 +340,7 @@ const Navbar = () => {
                     onClick={() => setActive(item[0])}
                     className={`flex relative z-10 items-center gap-1 px-3 py-3 font-light text-xs transition-all cursor-pointer
                        ${
-                       active === item[0]
+                         active === item[0]
                            ? "bg-teal-500 text-white"
                            : "text-black hover:text-teal-500"
                        }
@@ -340,7 +368,9 @@ const Navbar = () => {
                   to={item[1]}
                   onClick={() => setActive(item[0])}
                   className={`px-3 py-3 flex items-center font-light text-xs cursor-pointer relative z-10 transition-colors duration-300 ${
-                    active === item[0] ? "text-white" : "text-black hover:text-teal-500"
+                    active === item[0]
+                      ? "text-white"
+                      : "text-black hover:text-teal-500"
                   }`}
                 >
                   {item[0]}
@@ -354,7 +384,9 @@ const Navbar = () => {
       {/* Mobile Menu Overlay */}
       <div
         className={`fixed inset-0 bg-black/50 z-50 lg:hidden transition-opacity duration-300 ease-in-out ${
-          menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          menuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setMenuOpen(false)}
       >
@@ -365,7 +397,10 @@ const Navbar = () => {
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex justify-between mb-2">
-            <FiX className="text-2xl cursor-pointer" onClick={() => setMenuOpen(false)} />
+            <FiX
+              className="text-2xl cursor-pointer"
+              onClick={() => setMenuOpen(false)}
+            />
           </div>
 
           {menuItems.map((item, idx) => (
@@ -379,11 +414,18 @@ const Navbar = () => {
                       navigate("/ourServices");
                     }}
                     className={`w-full flex justify-between items-center py-1 text-xs cursor-pointer transition-colors duration-200 ${
-                      active === item[0] ? "text-teal-500" : "text-black hover:text-teal-500"
+                      active === item[0]
+                        ? "text-teal-500"
+                        : "text-black hover:text-teal-500"
                     }`}
                   >
                     {item[0]}
-                    <ChevronDown size={18} className={`transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""}`} />
+                    <ChevronDown
+                      size={18}
+                      className={`transition-transform duration-300 ${
+                        servicesOpen ? "rotate-180" : ""
+                      }`}
+                    />
                   </button>
 
                   {servicesOpen && (
@@ -412,7 +454,9 @@ const Navbar = () => {
                     setMenuOpen(false);
                   }}
                   className={`block py-1 text-xs cursor-pointer transition-colors duration-200 ${
-                    active === item[0] ? "text-teal-500" : "text-black hover:text-teal-500"
+                    active === item[0]
+                      ? "text-teal-500"
+                      : "text-black hover:text-teal-500"
                   }`}
                 >
                   {item[0]}
