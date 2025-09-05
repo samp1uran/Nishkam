@@ -1,63 +1,107 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
+  Building2,
+  FileCheck,
+  DollarSign,
+  Globe2,
+  BookOpen,
+  Users as UsersLucideIcon,
   Briefcase,
-  PiggyBank,
-  FileText,
-  TrendingUp,
-  Users,
-  Globe,
-  Search,
+  Receipt,
+  Percent,
+  ClipboardList,
+  Landmark,
+  Scissors,
 } from "lucide-react";
 import { useActive } from "../../Context/ActiveContext";
 
 const services = [
   {
-    icon: <Briefcase size={40} className="text-teal-500 mx-auto mb-4" />,
-    title: "Auditing and Assurance",
+    title: "Corporate Services",
     description:
-      "Provides solutions to corporates by carrying out Internal Control review, Special Audits, Statutory audits in compliance with the Indian Corporate laws.",
+      "Comprehensive support for company formation, compliance, and business structuring.",
+    icon: <Building2 className="w-8 h-8 text-primary" />,
+    link: "/services/corporate-services",
   },
   {
-    icon: <PiggyBank size={40} className="text-teal-500 mx-auto mb-4" />,
-    title: "Accounting Consultancy",
+    title: "Audit",
     description:
-      "Maintenance of Accounts/Records (SAP, ORACLE, Tally and other ERP Packages), Bank Reconciliation, Creditors...",
+      "Independent examination of financial statements to ensure accuracy and compliance.",
+    icon: <FileCheck className="w-8 h-8 text-primary" />,
+    link: "/services/audit",
   },
   {
-    icon: <FileText size={40} className="text-teal-500 mx-auto mb-4" />,
-    title: "Direct / Indirect taxation",
+    title: "Corporate Finance",
     description:
-      "Applying and obtaining Permanent Account Numbers (PANs) and Tax deduction Account Numbers (TANs).",
+      "Advisory on mergers, acquisitions, valuations, and financial restructuring.",
+    icon: <DollarSign className="w-8 h-8 text-primary" />,
+    link: "/services/corporate-finance",
   },
   {
-    icon: <TrendingUp size={40} className="text-teal-500 mx-auto mb-4" />,
-    title: "Business and Finance Planning and Business Process outsourcing",
+    title: "Services for Non-Residents",
     description:
-      "Prepare business plans, cash flow projections, budgets, and trading forecasts.",
+      "Specialized tax, compliance, and investment solutions for NRIs and foreign entities.",
+    icon: <Globe2 className="w-8 h-8 text-primary" />,
+    link: "/services/non-residents",
   },
   {
-    icon: <Users size={40} className="text-teal-500 mx-auto mb-4" />,
-    title: "Company Secretarial and Corporate Laws consultancy",
+    title: "Accounting Services",
     description:
-      "Assistance in carrying out the company secretarial duties including dealing with Registrar of Companies/Company Law Board.",
+      "Accurate bookkeeping, financial reporting, and account management for businesses.",
+    icon: <BookOpen className="w-8 h-8 text-primary" />,
+    link: "/services/accounting",
   },
   {
-    icon: <Globe size={40} className="text-teal-500 mx-auto mb-4" />,
-    title: "Foreign Trade Policy and Procedure",
+    title: "Payroll",
     description:
-      "Providing clarifications and opinions on the Foreign Trade Policy & Procedures including various Export Promotion Schemes available therein.",
+      "End-to-end payroll processing with tax deductions, compliance, and employee support.",
+    icon: <UsersLucideIcon className="w-8 h-8 text-primary" />,
+    link: "/services/payroll",
   },
   {
-    icon: <Search size={40} className="text-teal-500 mx-auto mb-4" />,
-    title: "Fraud Accounting and Detection",
+    title: "Benefits of Outsourcing",
     description:
-      "Helping businesses and individuals identify and document financial frauds, accounting irregularities, and other legal disputes.",
+      "Streamline operations and reduce costs with our reliable outsourcing solutions.",
+    icon: <Briefcase className="w-8 h-8 text-primary" />,
+    link: "/services/outsourcing",
+  },
+  {
+    title: "Income Tax",
+    description:
+      "Expert tax planning, filing, and advisory for individuals and businesses.",
+    icon: <Receipt className="w-8 h-8 text-primary" />,
+    link: "/services/income-tax",
+  },
+  // {
+  //   title: "Value Added Tax (VAT)",
+  //   description: "Compliance and advisory services for VAT registration, filing, and audits.",
+  //   icon: <Percent className="w-8 h-8 text-primary" />,
+  //   link: "/services/vat",
+  // },
+  // {
+  //   title: "Service Tax",
+  //   description: "Advisory and compliance support for businesses under service tax regulations.",
+  //   icon: <ClipboardList className="w-8 h-8 text-primary" />,
+  //   link: "/services/service-tax",
+  // },
+  {
+    title: "Corporate Governance",
+    description:
+      "Guidance on policies, structures, and compliance for effective governance.",
+    icon: <Landmark className="w-8 h-8 text-primary" />,
+    link: "/services/corporate-governance",
+  },
+  {
+    title: "TDS",
+    description:
+      "Tax Deducted at Source compliance, return filing, and advisory services.",
+    icon: <Scissors className="w-8 h-8 text-primary" />,
+    link: "/services/tds",
   },
 ];
-
-function Services({isHidden=""}) {
-  const {setActive}=useActive();
-  const navigate=useNavigate()
+function Services({ isHidden = "" }) {
+  const { setActive } = useActive();
+  const navigate = useNavigate();
   return (
     <div className="w-full">
       {/* hero */}
@@ -74,18 +118,16 @@ function Services({isHidden=""}) {
         </h1>
         <div className="absolute bottom-18 text-white text-sm z-10">
           <span
-            onClick={()=>{
-              setActive("HOME")
-              navigate('/')
+            onClick={() => {
+              setActive("HOME");
+              navigate("/");
             }}
             className="hover:text-green-500 cursor-pointer transition-normal duration-200"
           >
             Home
           </span>{" "}
           &gt;{" "}
-          <span
-            className="hover:text-green-500 cursor-pointer transition-normal duration-200"
-          >
+          <span className="hover:text-green-500 cursor-pointer transition-normal duration-200">
             Our Services
           </span>
         </div>
@@ -95,11 +137,21 @@ function Services({isHidden=""}) {
       <div className="max-w-5xl my-24 mx-auto px-4">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
-            <div key={index} className="text-center">
-              {service.icon}
-              <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
-              <p className="text-gray-600 text-sm">{service.description}</p>
-            </div>
+            <Link
+              key={index}
+              to={service.link}
+              className="group flex flex-col items-center text-center p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-gray-200"
+            >
+              <div className="text-primary text-teal-500 text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                {service.icon}
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                {service.title}
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {service.description}
+              </p>
+            </Link>
           ))}
         </div>
       </div>
