@@ -13,7 +13,7 @@ export default function Layout() {
         <Header />
         <main className="pt-6 pb-4 flex-grow">
           <WhatsappAndCall />
-          <Chat />
+          {/* <Chat /> */}
           <Outlet />
         </main>
 
