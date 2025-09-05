@@ -9,10 +9,10 @@ const HeroSection = () => {
         className="h-screen mx-2 mb-4 bg-no-repeat md:bg-fixed bg-center flex items-center justify-center"
         style={{
           backgroundImage:
-            "url('https://cdn.prod.website-files.com/63b042656c21e611f6f8be44/67f7ed324ebc2fa1540e4b2e_640b569fc38939793fde0420_32f473e5-be47-4da8-b11e-45431216a73a.webp')",
+            "url('https://static.vecteezy.com/system/resources/previews/007/389/677/non_2x/close-up-hand-of-businessman-or-accountant-hand-holding-pen-working-on-calculator-to-calculate-business-data-accountancy-document-and-laptop-computer-at-office-business-concept-free-photo.jpg')",
         }}
       >
-        <div className="bg-opacity-50 z-10 p-8 rounded-md max-w-3xl text-center text-white">
+        <div className="bg-opacity-50 z-10 p-8 rounded-md max-w-3xl text-center text-gray-900">
           <h1 className="text-3xl md:text-5xl font-bold leading-snug">
             Looking for SOX Compliance;
             <br />
