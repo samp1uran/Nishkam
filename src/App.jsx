@@ -36,19 +36,12 @@ export default function App() {
         <Route path="about" element={<About/>} />
         <Route path="ourServices" element={<Services/>} />
         <Route path="login" element={<Login/>} />
-        <Route path="ourClientele" element={<OurClientele/>} />
+        {/* <Route path="ourClientele" element={<OurClientele/>} /> */}
         <Route path="workWithUs" element={<WorkWithUs/>} />
-        <Route path="team" element={<Team/>} />
+        {/* <Route path="team" element={<Team/>} /> */}
         <Route path="resources" element={<Resources/>} />
         <Route path="blog" element={<Blog/>} />
         <Route path="contact" element={<Contact/>} />
-        <Route path="services/business" element={<Business/>} />
-        <Route path="services/outsourcing" element={<Business/>} />
-        <Route path="services/taxation" element={<Taxation/>} />
-        <Route path="services/lawConsultant" element={<LawConsultant/>} />
-        <Route path="services/auditing" element={<FraudAccounting/>} />
-        <Route path="services/foreignTrade" element={<ForeignTrade/>} />
-        <Route path="services/accounting" element={<Accounting/>} />
         <Route path="services/corporate-service" element={<CorporateServices/>} />
         <Route path="/services/audit" element={<AuditServices/>} />
         <Route path="/services/corporate-finance" element={<CorporateFinance/>} />
