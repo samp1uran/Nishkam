@@ -3,6 +3,7 @@ import { Parallax } from "react-scroll-parallax";
 const HeroSection = () => {
   const [text, setText] = useState("");
   const [isTrue, setTrue] = useState(true);
+  const [lineClamp,setLineClamp]=useState("line-clamp-3");
   return (
     <>
       <section
@@ -18,15 +19,22 @@ const HeroSection = () => {
             <br />
             Payroll Processing;
           </h1>
-          <p className="mt-4 text-sm md:text-sm">
+          <p className={`mt-4 text-sm md:text-sm ${lineClamp}`}>
             Accounting advice in ERP implementation; Multinational Audits; Group
             Reporting; US International/Indian GAAP; Company formation and CLB
             advisory services; Central Bank (FEMA) regulatory matters; taxation
             matters; GST registration; Experts and non-resident matters;
-            business consulting.
+            business consulting.We are well-versed in US GAAP, International
+            Standards, and Indian GAAP, enabling businesses to maintain accurate
+            reporting while meeting global requirements. In addition, we assist
+            with company formation, restructuring, and CLB advisory services,
+            guiding organizations through corporate legal frameworks.
           </p>
-          <button className="mb-8 md:mb-6  mt-6 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded shadow-lg">
-            READ MORE
+          <button onClick={()=>{
+            if(lineClamp==="line-clamp-3")setLineClamp("");
+            else setLineClamp("line-clamp-3")
+          }} className="mb-8 md:mb-6  mt-6 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded shadow-lg">
+            READ {lineClamp==="line-clamp-3"?"MORE":"LESS"}
           </button>
         </div>
       </section>
@@ -35,7 +43,6 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
 
 // import { useState } from "react";
 // import { Parallax } from "react-scroll-parallax";
