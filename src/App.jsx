@@ -27,6 +27,8 @@ import BenefitsOfOutsourcing from "./components/Services/BenefitsOfOutsourcing";
 import IncomeTax from "./components/Services/IncomeTax";
 import CorporateGovernance from "./components/Services/CorporateGovernance";
 import Tds from "./components/Services/Tds";
+import Careers from "./components/Careers";
+import Query from "./components/Query";
 
 export default function App() {
   return (
@@ -42,6 +44,8 @@ export default function App() {
         <Route path="resources" element={<Resources/>} />
         <Route path="blog" element={<Blog/>} />
         <Route path="contact" element={<Contact/>} />
+        <Route path="careers" element={<Careers/>} />
+        <Route path="query" element={<Query/>} />
         <Route path="services/corporate-service" element={<CorporateServices/>} />
         <Route path="/services/audit" element={<AuditServices/>} />
         <Route path="/services/corporate-finance" element={<CorporateFinance/>} />

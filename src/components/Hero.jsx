@@ -33,7 +33,7 @@ const HeroSection = () => {
           <button onClick={()=>{
             if(lineClamp==="line-clamp-3")setLineClamp("");
             else setLineClamp("line-clamp-3")
-          }} className="mb-8 md:mb-6  mt-6 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded shadow-lg">
+          }} className="cursor-pointer mb-8 md:mb-6  mt-6 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded shadow-lg">
             READ {lineClamp==="line-clamp-3"?"MORE":"LESS"}
           </button>
         </div>
