@@ -279,39 +279,26 @@ const Navbar = () => {
     <nav className="shadow-md bg-white w-full flex justify-center items-center z-50 relative">
       <div className="flex flex-col w-full lg:w-fit lg:justify-between gap-8">
         {/* Top Section */}
-        <div className="flex justify-start lg:justify-center items-center py-3 lg:py-4">
-          {/* Mobile Menu Icon */}
-          <div className="flex items-center ml-3 gap-4 lg:hidden">
+
+        <div className="flex items-center justify-between py-3 lg:py-4 px-3 relative">
+          {/* Left - Mobile Menu Icon */}
+          <div className="flex items-center gap-4 lg:hidden">
             <FiMenu
               className="text-2xl cursor-pointer"
               onClick={() => setMenuOpen(true)}
             />
           </div>
 
-          {/* Logo */}
-          {/* <div className="text-center flex-1">
-            <img
-              src="/logo2.png" // <-- replace with your logo path
-              alt="Logo"
-              className="w-10 h-10 md:w-14 md:h-14 object-contain"
-            />
-            <h1 className="text-2xl md:text-3xl font-bold text-teal-500">
-              Nishkam Bansal
-            </h1>
-            <p className="text-[10px] md:text-xs text-gray-700 tracking-wide">
-              CHARTERED ACCOUNTANTS
-            </p>
-          </div> */}
-          <div className="ml-2 lg:ml-0 flex justify-center items-center gap-2">
-            {/* Logo */}
-            <img
-              src="/logo2.png" // <-- replace with your logo path
-              alt="Logo"
-              className="w-10 h-10 md:w-14 md:h-14 object-contain"
-            />
-
-            {/* Text */}
-            <div className="text-center flex-1">
+          {/* Center - Logo + Title */}
+          <div className="flex flex-row items-center mx-auto">
+            <div className="flex items-center gap-2">
+              <img
+                src="/logo2.png"
+                alt="Logo"
+                className="w-10 h-10 md:w-14  md:h-14 object-contain"
+              />
+            </div>
+            <div className="text-center">
               <h1 className="text-2xl md:text-3xl font-bold text-teal-500">
                 Nishkam Bansal
               </h1>
@@ -320,6 +307,9 @@ const Navbar = () => {
               </p>
             </div>
           </div>
+
+          {/* Right - Placeholder (for symmetry) */}
+          <div className="w-6 lg:hidden"></div>
         </div>
 
         {/* Desktop Menu */}
