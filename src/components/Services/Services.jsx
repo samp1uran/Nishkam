@@ -49,7 +49,7 @@ const services = [
     description:
       "Accurate bookkeeping, financial reporting, and account management for businesses.",
     icon: <BookOpen className="w-8 h-8 text-primary" />,
-    link: "/services/accounting",
+    link: "/services/accounting-services",
   },
   {
     title: "Payroll",
@@ -63,7 +63,7 @@ const services = [
     description:
       "Streamline operations and reduce costs with our reliable outsourcing solutions.",
     icon: <Briefcase className="w-8 h-8 text-primary" />,
-    link: "/services/outsourcing",
+    link: "/services/benefits-of-outsourcing",
   },
   {
     title: "Income Tax",
