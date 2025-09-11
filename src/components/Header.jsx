@@ -291,7 +291,11 @@ const Navbar = () => {
           </div>
 
           {/* Center - Logo + Title */}
-          <div className="flex flex-row items-center mx-auto">
+          <Link
+            className="flex flex-row cursor-pointer items-center mx-auto"
+            to={'/'}
+            onClick={() => setActive('HOME')}
+          >
             <div className="flex items-center gap-2">
               <img
                 src="/logo2.png"
@@ -307,7 +311,7 @@ const Navbar = () => {
                 CHARTERED ACCOUNTANTS
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* Right - Placeholder (for symmetry) */}
           <div className="w-6 lg:hidden"></div>
