@@ -25,7 +25,7 @@ function Signup() {
   };
   return (
     <>
-      <div className="w-full mx-auto bg-white rounded-lg shadow dark:border md: mt-16 mb-16 sm:max-w-md xl:p-0 ">
+      <div className="max-w-xl mx-5 sm:mx-auto bg-white rounded-lg shadow dark:border md: mt-8 mb-16 sm:max-w-md xl:p-0 ">
         <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
           <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-black">
             Create your account

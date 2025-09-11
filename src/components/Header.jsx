@@ -258,6 +258,7 @@ const Navbar = () => {
     ["CONTACT US", "contact"],
     ["QUERY", "query"],
     ["CAREERS", "careers"],
+    ["ADMIN", "login"],
   ];
 
   // Refs for sliding indicator

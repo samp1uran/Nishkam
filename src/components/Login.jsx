@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Login() {
   return (
     <>
-      <div className="w-full mx-auto bg-white rounded-lg shadow dark:border md: mt-16 mb-16 sm:max-w-md xl:p-0 ">
+      <div className="max-w-xl mx-5 sm:mx-auto bg-white rounded-lg shadow dark:border md: mt-8 mb-16 sm:max-w-md xl:p-0 ">
         <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
           <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-black">
             Sign in to your account
@@ -53,7 +53,7 @@ function Login() {
                     required=""
                   />
                 </div>
-                <div className="ml-3 text-sm">
+                <div className="ml-1 whitespace-nowrap mr-3 text-sm">
                   <label htmlFor="remember" className="text-gray-900">
                     Remember me
                   </label>
@@ -61,7 +61,7 @@ function Login() {
               </div>
               <a
                 href="#"
-                className="text-sm font-medium text-gray-900 hover:underline"
+                className="text-sm whitespace-nowrap tracking-tight font-medium text-gray-900 hover:underline"
               >
                 Forgot password?
               </a>
