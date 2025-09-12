@@ -29,10 +29,10 @@ export default function Footer() {
         <div>
           <h2 className="text-white font-bold text-lg mb-4">Connect With Us</h2>
           <div className="flex space-x-4">
-            <a href="#" className="hover:text-white text-xl"><FaFacebookF /></a>
-            <a href="#" className="hover:text-white text-xl"><FaTwitter /></a>
-            <a href="#" className="hover:text-white text-xl"><FaLinkedinIn /></a>
-            <a href="#" className="hover:text-white text-xl"><FaInstagram /></a>
+            <Link to="/" className="hover:text-white text-xl"><FaFacebookF /></Link>
+            <Link to="/" className="hover:text-white text-xl"><FaTwitter /></Link>
+            <Link to="/" className="hover:text-white text-xl"><FaLinkedinIn /></Link>
+            <Link to="/" className="hover:text-white text-xl"><FaInstagram /></Link>
           </div>
         </div>
 
