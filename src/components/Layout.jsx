@@ -16,10 +16,10 @@ export default function Layout() {
           {/* <Chat /> */}
           <Outlet />
         </main>
-
+        <Footer />
       </ActiveProvider>
 
-      <Footer />
+      
       <ToastContainer
         position="top-right"
         autoClose={3000}
