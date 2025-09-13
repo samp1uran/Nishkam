@@ -4,8 +4,7 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import { useActive } from "../Context/ActiveContext";
+import { NavLink } from "react-router-dom";
 const tabs = [
   ["Home", "/"],
   ["Careers", "/careers"],
@@ -13,7 +12,6 @@ const tabs = [
   ["Contact Us", "/contact"],
 ];
 export default function Footer() {
-  const { setActive } = useActive();
   return (
     <footer className="bg-[#1a2433] text-gray-300 py-10">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -32,20 +30,15 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {tabs.map((tab, idx) => (
               <li>
-                <Link
+                <NavLink
                   key={idx}
                   to={tab[1]}
-                  onClick={() => setActive(tab[0].toUpperCase())}
                   className="hover:text-white"
                 >
                   {tab[0]}
-                </Link>
+                </NavLink>
               </li>
             ))}
-            {/*             
-            <li><Link to="/query" className="hover:text-white">Query</Link></li>
-            <li><Link to="/careers" className="hover:text-white">Careers</Link></li>
-            <li><Link to="/contact" className="hover:text-white">Contact Us</Link></li> */}
           </ul>
         </div>
 

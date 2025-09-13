@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   Building2,
   FileCheck,
@@ -13,7 +13,6 @@ import {
   Landmark,
   Scissors,
 } from "lucide-react";
-import { useActive } from "../../Context/ActiveContext";
 
 const services = [
   {
@@ -100,8 +99,7 @@ const services = [
   },
 ];
 function Services({ isHidden = "" }) {
-  const { setActive } = useActive();
-  const navigate = useNavigate();
+
   return (
     <div className="w-full">
       {/* hero */}
@@ -117,15 +115,12 @@ function Services({ isHidden = "" }) {
           OUR SERVICES
         </h1>
         <div className="absolute bottom-18 text-white text-sm z-10">
-          <span
-            onClick={() => {
-              setActive("HOME");
-              navigate("/");
-            }}
+          <NavLink
+            to='/'
             className="hover:text-green-500 cursor-pointer transition-normal duration-200"
           >
             Home
-          </span>{" "}
+          </NavLink>{" "}
           &gt;{" "}
           <span className="hover:text-green-500 cursor-pointer transition-normal duration-200">
             Our Services
@@ -137,9 +132,8 @@ function Services({ isHidden = "" }) {
       <div className="max-w-5xl my-24 mx-auto px-4">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
-            <Link
+            <NavLink
               key={index}
-              onClick={() => setActive("OUR SERVICES")}
               to={service.link}
               className="group flex flex-col items-center text-center p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-gray-200"
             >
@@ -152,7 +146,7 @@ function Services({ isHidden = "" }) {
               <p className="text-gray-600 text-sm leading-relaxed">
                 {service.description}
               </p>
-            </Link>
+            </NavLink>
           ))}
         </div>
       </div>

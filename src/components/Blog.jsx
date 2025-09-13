@@ -1,10 +1,6 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Blog() {
-  const navigate = useNavigate();
-  const [active, setActive] = React.useState("BLOG");
-
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -17,16 +13,13 @@ export default function Blog() {
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <h1 className="relative text-white text-3xl font-bold z-10">BLOG</h1>
-        <div className="absolute bottom-6 text-white text-sm z-10 flex gap-2">
-          <span
-            onClick={() => {
-              setActive("HOME");
-              navigate("/");
-            }}
+        <div className="absolute bottom-18 text-white text-sm z-10 flex gap-2">
+          <NavLink
+            to='/'
             className="hover:text-green-500 cursor-pointer transition duration-200"
           >
             Home
-          </span>
+          </NavLink>
           <span>&gt;</span>
           <span className="hover:text-green-500 cursor-pointer transition duration-200">
             Blog

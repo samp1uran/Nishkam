@@ -1,10 +1,6 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { useActive } from "../Context/ActiveContext";
+import { NavLink } from "react-router-dom";
 
 const About = () => {
-  const {setActive}=useActive()
-  const navigate=useNavigate()
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -20,15 +16,12 @@ const About = () => {
           ABOUT US
         </h1>
         <div className="absolute bottom-18 text-white text-sm z-10">
-          <span
-            onClick={()=>{
-              setActive("HOME")
-              navigate('/')
-            }}
+          <NavLink
+            to='/'
             className="hover:text-green-500 cursor-pointer transition-normal duration-200"
           >
             Home
-          </span>{" "}
+          </NavLink>{" "}
           &gt;{" "}
           <span
             className="hover:text-green-500 cursor-pointer transition-normal duration-200"

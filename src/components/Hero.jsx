@@ -1,8 +1,5 @@
 import { useState } from "react";
-import { Parallax } from "react-scroll-parallax";
 const HeroSection = () => {
-  const [text, setText] = useState("");
-  const [isTrue, setTrue] = useState(true);
   const [lineClamp,setLineClamp]=useState("line-clamp-3");
   return (
     <>
